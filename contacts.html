@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/ed41097ace.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
     <div id="first">
-        <div class="name">My Website</div>
+        <div class="name">Website</div>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,11 +19,61 @@
             </ul>
         </nav>
     </div>
-    <h2 id="pageName">Articles</h2>
+    <h2 id="pageName">Contact me</h2>
 </header>
-<main><section><h3>Github</h3><p><a href="https://github.com/cxnexion">Mine</a></p></section></main>
+<main>
+    <section class="fA"><h3>Github</h3>
+
+        <div class="line"><i class="fa-brands fa-github fa-2xl"></i>
+            <div class="box"><p class="link"><a href="https://github.com/cxnexion">cxnexion</a></p></div>
+        </div>
+        <div class="line"><i class="fa-brands fa-github fa-2xl"></i>
+            <div class="box"><p class="link"><a href="https://github.com/cxnexion/Personal-Portfolio">This project</a>
+            </p></div>
+        </div>
+        <div class="line"><i class="fa-brands fa-github fa-2xl"></i>
+            <div class="box"><p class="link"><a href="https://github.com/cxnexion/Basic-HTML-Website">Original
+                project</a></p></div>
+        </div>
+    </section>
+    <section class="sA"><h3>Youtube</h3>
+        <div class="line"><i class="fa-brands fa-youtube fa-2xl"></i>
+            <div class="box"><p class="link"><a href="https://youtube.com">Youtube</a></p></div>
+        </div>
+        <div class="line"><i class="fa-brands fa-youtube fa-2xl"></i>
+            <div class="box"><p class="link"><a href="https://youtube.com">Youtube</a></p></div>
+        </div>
+        <div class="line"><i class="fa-brands fa-youtube fa-2xl"></i>
+            <div class="box"><p class="link"><a href="https://youtube.com">Youtube</a></p></div>
+        </div>
+    </section>
+    <section class="tA"><h3>Email</h3>
+        <div class="line"><i class="fa-solid fa-envelope fa-2xl"></i>
+            <div class="box"><p class="link"><a href="mailto:cxnexion@private.fake">Maybe me</a></p></div>
+        </div>
+        <div class="line"><i class="fa-solid fa-envelope fa-2xl"></i>
+            <div class="box"><p class="link"><a href="mailto:cxnexion@private.fake">Idk who</a></p></div>
+        </div>
+        <div class="line"><i class="fa-solid fa-envelope fa-2xl"></i>
+            <div class="box"><p class="link"><a href="mailto:cxnexion@private.fake">Someone other</a></p></div>
+        </div>
+    </section>
+</main>
 <footer>
     <h3> &copy; all rights reserved 2025</h3>
 </footer>
 </body>
+<script>
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const items = section.querySelectorAll('.link');
+        section.addEventListener('mouseenter', () => {
+            items.forEach(item => {
+                if (!item.classList.contains('animated')) {
+                    item.classList.add('animated');
+                }
+            });
+        });
+    });
+</script>
 </html>

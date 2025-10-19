@@ -1,5 +1,11 @@
-* {
-    font-family: "Roboto Thin", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --space-cadet: #22223bff;
+    --ultra-violet: #4a4e69ff;
+    --rose-quartz: #9a8c98ff;
+    --pale-dogwood: #c9ada7ff;
+    --isabelline: #f2e9e4ff;
 }
 
 .name {
@@ -8,15 +14,16 @@
 
 header {
     padding: 0px 10px 10px;
-    border: 2px solid;
 }
 footer{
-    border: 2px solid;
     display: flex;
 justify-content: center;
     align-items: flex-end;
     padding: 10px;
-    flex: fit-content;
+    flex-shrink: 0;
+    background-color: var(--ultra-violet);
+    height: 20vh;
+    color: var(--space-cadet);
 }
 #first{
     height: 75px;
@@ -39,13 +46,14 @@ a {
 }
 section{
     display: inline-block;
-    border: 1px solid;
-    padding: 25px;
+    padding: 5px;
     flex: 1;
+    background-color: var(--pale-dogwood);
 }
 main{
     display: flex;
     justify-content: space-between;
+    flex: 1;
 }
 
 #pageName {
@@ -55,11 +63,67 @@ main{
 body{
     display: flex;
     flex-direction: column;
+    background-color: var(--isabelline);
+    font-family: Roboto, sans-serif;
 }
 html,body{
     height: 99.9vh;
-    margin: 0.5px;
+    margin: 0;
 }
 p a{
-    color: #4d4d4d;
+    color: var(--ultra-violet);
+}
+.name{
+    padding: 10px;
+}
+@media (max-width: 600px){
+    main{
+        flex-direction: column;
+    }
+    #first{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar{
+        margin: 10px;
+    }
+}
+.fA{
+    background-color: var(--pale-dogwood);
+}
+.sA{
+    background-color: var(--rose-quartz);
+}
+.tA{
+    background-color: var(--ultra-violet);
+}
+.animated{
+    animation: textSlide 0.75s ease-in-out forwards;
+}
+.link{
+    transform: translateX(-110%);
+}
+.link a{
+    color: black;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.box{
+    overflow: hidden;
+    margin: 0;
+    transform: translateX(5px);
+    padding: 5px;
+}
+.fa-github{
+    margin-right: -10px;
+}
+@keyframes textSlide {
+    0%{
+        transform: translateX(-110%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
